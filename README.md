@@ -2,8 +2,8 @@
 P3.1  P3.3  P3.5  P3.12  P3.17
 ---
 ## P3.1
-![alt text](image.png)
-![alt text](image-1.png)
+![3-1](image/3-1.png)
+![3-1 사진](image/3-1 사진.png)
 ### sol) (a)
 * $x_1(t)=y(t)$  
 * $x_2(t)=dx_1(t)/dt=dy(t)/dt$  
