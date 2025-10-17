@@ -19,44 +19,39 @@ $$dx_1(t)/dt=x_2(t)$$
 $$\dot{\mathbf{x}}(t)=\mathbf{A}\mathbf{x}(t)+\mathbf{B}\mathbf{u}(t)$$
 $$\mathbf{y}(t)=\mathbf{C}\mathbf{x}(t)+\mathbf{D}\mathbf{u}(t)$$ 와 같은 형식이므로  
 $$\dot{\mathbf{x}}(t)=\begin{bmatrix}0&1\\k/M&-b/M\end{bmatrix}\mathbf{x}(t)+\begin{bmatrix}0\\1/M\end{bmatrix}\mathbf{F}(t)$$  
-$$\mathbf{y}(t)=\begin{bmatrix}1&0\end{bmatrix}\mathbf{x}(t)$$
-이다.  
+$$\mathbf{y}(t)=\begin{bmatrix}1&0\end{bmatrix}\mathbf{x}(t)$$이다.  
 
 ---
 
 ## P3.3
 ![3-3](images/3-3.png)
-이 system을 파악하기 위해 KCL, KVL을 통해 관계식을 얻는다.
-* KVL(전체 loop)
-$$v_1(t)+v_2(t)=L(di_L(t)/dt)-v_c(t)$$
-* KCL(RLC가 모두 연결되는 node)
-$$i_L(t)+C(dv_c(t)/dt)=i_R(t)$$
-이 때 $i_R(t)가$ 상태변수 또는 입력 부분에서 정의되지 않으므로 회로 오른쪽 KVL 루프를 통해 정의 되어있는 변수에 관한 관계식으로 정의하도록 한다.  
-* KVL(오른쪽 loop)
-$$i_R(t)=(-v_c(t)+v_2(t))/R$$
-$i_R(t)=(-v_c(t)+v_2(t))/R$을 $i_L(t)+C(dv_c(t)/dt)=i_R(t)$에 대입하면
-$$i_L(t)+C(dv_c(t)/dt)=(v_2(t)-v_c(t))/R$$
-이다.
-$v_1(t)+v_2(t)=L(di_L(t)/dt)-v_c(t)$과 $i_L(t)+C(dv_c(t)/dt)=(v_2(t)-v_c(t))/R$를 정의한 상태변수로 정리하면 다음과 같다.
+이 회로의 system을 파악하기 위해 KCL, KVL을 통해 관계식을 얻는다.
+* KVL(전체 loop)  
+$$v_1(t)-v_2(t)=L(di_L(t)/dt)-v_c(t)$$
+* KCL(RLC 모두 연결되는 node)  
+$$i_L(t)+C(dv_c(t)/dt)=i_R(t)$$  
+* KVL(오른쪽 loop)  
+$$i_R(t)=(-v_c(t)+v_2(t))/R$$  
+위의 식을 $$i_L(t)+C(dv_c(t)/dt)=i_R(t)$$에 대입하면  
+$$i_L(t)+C(dv_c(t)/dt)=(v_2(t)-v_c(t))/R$$이다.  
+$$v_1(t)-v_2(t)=L(di_L(t)/dt)-v_c(t)$$과 $$i_L(t)+C(dv_c(t)/dt)=(v_2(t)-v_c(t))/R$$를 주어진 상태변수로 정리하면 다음과 같다.  
 $$dx_1(t)/dt=(1/L)x_2(t)+(1/L)v_1(t)-(1/L)v_2(t)$$
-$$dx_2(t)/dt=-(1/C)x_1(t)-(1/RC)x_2(t)+(1/RC)v_2(t)$$
-이를 통해 상태미분방정식을 구하면 다음과 같다.
-$$\mathbf{x}(t)=\begin{bmatrix}x_1(t)\\x_2(t)\end{bmatrix}$$
-$$\mathbf{v}(t)=\begin{bmatrix}v_1(t)\\v_2(t)\end{bmatrix}$$
+$$dx_2(t)/dt=-(1/C)x_1(t)-(1/RC)x_2(t)+(1/RC)v_2(t)$$  
+상태미분방정식은 다음과 같다.  
+$$\mathbf{x}(t)=\begin{bmatrix}x_1(t)\\x_2(t)\end{bmatrix}$$  
+$$\mathbf{v}(t)=\begin{bmatrix}v_1(t)\\v_2(t)\end{bmatrix}$$  
 $$\dot{\mathbf{x}}(t)=\begin{bmatrix}0&1/L\\-1/C&-1/RC\end{bmatrix}\mathbf{x}(t)+\begin{bmatrix}1/L&-1/L\\0&1/RC\end{bmatrix}\mathbf{v}(t)$$
+
 ---
+
 ## P3.5
 ![3-5](images/3-5.png)
 ![3-5 사진](images/3-5-.png)
-### sol) (a)
-폐루프에서의 전달함수는 입출력 사이의 전달함수를 $G(s)$, 피드백 전달함수를 $H(s)$라고 하면 폐루프 전달함수 $T(s)$는
-$$T(s)=G(s)/(1+G(s)H(s))$$
-이다.
-$$H(s)=1$$
-$$G(s)=(s+2)/((s+8)*(s-3)*s)$$
-이므로 $T(s)$는 다음과 같이 정의된다.
+### (a)
+우선 폐루프에서의 전달함수에 관해 알아야 한다. 입출력 사이의 전달함수를 $$G(s)$$, 피드백 전달함수를 $$H(s)$$라고 하면 $$T(s)=G(s)/(1+G(s)H(s))$$이다.  
+$$H(s)=1$$이고 $$G(s)=(s+2)/(s*(s-3)*(s+8))$$이므로 
 $$T(s)=(s+2)/(s^3+5s^2-23s+2)$$
-### sol) (b)
+### (b)
 phase variable canonical form 을 사용하는 이유는 system을 laplace transform을 사용하여 transfer function $G(s)$를 구하는 과정은 단순하고 transfer function은 해당 system에 유일하므로 state space equation을 사용하는데 오류가 없다.
 이 phase variable canonical form은 정형화된 표현이 존재하고 이를 유도하는 과정은 수업에서 다루었으므로 생략하기로 한다.  
 $$\mathbf{A}=\begin{bmatrix}0&1&0\\0&0&1\\-a_0&-a_1&-a_2\end{bmatrix}$$
