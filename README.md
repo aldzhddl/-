@@ -1,4 +1,4 @@
-# Control-Engineering-Assignment
+# 2023732036 강민주 제어공학1 과제
 P3.1  P3.3  P3.5  P3.12  P3.17
 ---
 ## P3.1
