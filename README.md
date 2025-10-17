@@ -1,19 +1,20 @@
 # 2023732036 강민주 제어공학1 과제
-P3.1  P3.3  P3.5  P3.12  P3.17
+
 ---
+
 ## P3.1
 ![3-1](images/3-1.png)
 ![3-1 사진](images/3-1-.png)
-### sol) (a)
+### (a)
 * $x_1(t)=y(t)$  
 * $x_2(t)=dx_1(t)/dt=dy(t)/dt$  
-### sol) (b)
-뉴턴의 제2법칙을 적용하여 도출된 미분방정식  
-$$M(d^2y(t)/dt^2)+b(dy(t)/dt)+ky(t)=F(t)$$
-이를 (a)에서 정의한 상태변수로 표현하면 다음과 같다.
-$$dx_2(t)/dt=-b/M(x_2(t))-k/M(x_1(t))+F(t)/M$$
+### (b)
+뉴턴의 제2법칙을 적용하여 운동방정식을 세운다.  
+$$M(d^2y(t)/dt^2)+b(dy(t)/dt)+ky(t)=F(t)$$  
+위의 식에 (a)에서 정의한 상태변수를 대입한다.  
+$$dx_2(t)/dt=-b/M(x_2(t))-k/M(x_1(t))+F(t)/M$$  
 $$dx_1(t)/dt=x_2(t)$$
-### sol) (c)
+### (c)
 상태미분방정식은
 $$\dot{\mathbf{x}}(t)=\mathbf{A}\mathbf{x}(t)+\mathbf{B}\mathbf{u}(t)$$
 $$\mathbf{y}(t)=\mathbf{C}\mathbf{x}(t)+\mathbf{D}\mathbf{u}(t)$$
