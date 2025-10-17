@@ -24,7 +24,7 @@ $$\mathbf{y}(t)=\begin{bmatrix}1&0\end{bmatrix}\mathbf{x}(t)$$
 
 ---
 ## P3.3
-![alt text](image-3.png)
+![3-3](images/3-3.png)
 이 system을 파악하기 위해 KCL, KVL을 통해 관계식을 얻는다.
 * KVL(전체 loop)
 $$v_1(t)+v_2(t)=L(di_L(t)/dt)-v_c(t)$$
@@ -45,8 +45,8 @@ $$\mathbf{v}(t)=\begin{bmatrix}v_1(t)\\v_2(t)\end{bmatrix}$$
 $$\dot{\mathbf{x}}(t)=\begin{bmatrix}0&1/L\\-1/C&-1/RC\end{bmatrix}\mathbf{x}(t)+\begin{bmatrix}1/L&-1/L\\0&1/RC\end{bmatrix}\mathbf{v}(t)$$
 ---
 ## P3.5
-![alt text](image-4.png)
-![alt text](image-5.png)
+![3-5](images/3-5.png)
+![3-5 사진](images/3-5-.png)
 ### sol) (a)
 폐루프에서의 전달함수는 입출력 사이의 전달함수를 $G(s)$, 피드백 전달함수를 $H(s)$라고 하면 폐루프 전달함수 $T(s)$는
 $$T(s)=G(s)/(1+G(s)H(s))$$
@@ -67,7 +67,7 @@ $$\dot{\mathbf{x}}(t)=\begin{bmatrix}0&1&0\\0&0&1\\-2&23&-5\end{bmatrix}\mathbf{
 $$\mathbf{y}(t)=\begin{bmatrix}2&1&0\end{bmatrix}\mathbf{x}(t)$$
 ---
 ## P3.12
-![alt text](image-6.png)
+![3-12](images/3-12.png)
 P3.12의 문제에서 state transition matrix을 구해야한다. $\Phi(s)=\begin{bmatrix}sI-A\end{bmatrix}^{-1}$를 계산해야 하므로 이를 수식으로 계산하여 답을 구하는 대에는 굉장한 난이도가 있다. 그러므로 이 문제에서는 matlab코드를 markdown형식으로 표현하고 실행결과를 사진으로 업로드 하여 답을 도출하도록 한다.
 ### sol) (a)
 <pre>syms s
@@ -95,7 +95,7 @@ Phi_t=ilaplace(Phi_s)</pre>
 
 ---
 ## P3.17
-![alt text](image-7.png)  
+![3-17](images/3-17.png)  
 P 3.12와 같은 이유로 matlab을 사용하여 문제를 풀이하겠음.
 <pre>A=[1, 1, -1; 4, 3, 0; -2, 1, 10];
 B=[0;0;4];
