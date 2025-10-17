@@ -40,7 +40,7 @@ $$dx_2(t)/dt=-(1/C)x_1(t)-(1/RC)x_2(t)+(1/RC)v_2(t)$$
 상태미분방정식은 다음과 같다.  
 $$\mathbf{x}(t)=\begin{bmatrix}x_1(t)\\x_2(t)\end{bmatrix}$$  
 $$\mathbf{v}(t)=\begin{bmatrix}v_1(t)\\v_2(t)\end{bmatrix}$$  
-$$\dot{\mathbf{x}}(t)=\begin{bmatrix}0&1/L\\-1/C&-1/RC\end{bmatrix}\mathbf{x}(t)+\begin{bmatrix}1/L&-1/L\\0&1/RC\end{bmatrix}\mathbf{v}(t)$$
+$$\dot{\mathbf{x}}(t)=\begin{bmatrix}0&1/L\\-1/C&-1/RC\end{bmatrix}\mathbf{x}(t)+\begin{bmatrix}1/L&-1/L\\0&1/RC\end{bmatrix}\mathbf{v}(t)$$  
 
 ---
 
@@ -52,15 +52,14 @@ $$\dot{\mathbf{x}}(t)=\begin{bmatrix}0&1/L\\-1/C&-1/RC\end{bmatrix}\mathbf{x}(t)
 $$H(s)=1$$이고 $$G(s)=(s+2)/(s*(s-3)*(s+8))$$이므로 
 $$T(s)=(s+2)/(s^3+5s^2-23s+2)$$
 ### (b)
-phase variable canonical form 을 사용하는 이유는 system을 laplace transform을 사용하여 transfer function $G(s)$를 구하는 과정은 단순하고 transfer function은 해당 system에 유일하므로 state space equation을 사용하는데 오류가 없다.
-이 phase variable canonical form은 정형화된 표현이 존재하고 이를 유도하는 과정은 수업에서 다루었으므로 생략하기로 한다.  
-$$\mathbf{A}=\begin{bmatrix}0&1&0\\0&0&1\\-a_0&-a_1&-a_2\end{bmatrix}$$
-$$\mathbf{B}=\begin{bmatrix}0\\0\\0\\1\end{bmatrix}$$
-$$\mathbf{C}=\begin{bmatrix}b_0&b_1&b_2\end{bmatrix}$$
-$$\mathbf{D}=0$$
-$a_2=5, a_1=-23, a_0=2$이고 $b_2=0, b_1=1, b_0=2$이므로 이를 위 matrix에 대입하여 state space equation을 표현하면 다음과 같다.
-$$\dot{\mathbf{x}}(t)=\begin{bmatrix}0&1&0\\0&0&1\\-2&23&-5\end{bmatrix}\mathbf{x}(t)+\begin{bmatrix}0\\0\\1\end{bmatrix}\mathbf{r}(t)$$
-$$\mathbf{y}(t)=\begin{bmatrix}2&1&0\end{bmatrix}\mathbf{x}(t)$$
+$$\mathbf{A}=\begin{bmatrix}0&1&0\\0&0&1\\-a_0&-a_1&-a_2\end{bmatrix}$$  
+$$\mathbf{B}=\begin{bmatrix}0\\0\\0\\1\end{bmatrix}$$  
+$$\mathbf{C}=\begin{bmatrix}b_0&b_1&b_2\end{bmatrix}$$  
+$$\mathbf{D}=0$$  
+$$a_2=5, a_1=-23, a_0=2$$이고 $$b_2=0, b_1=1, b_0=2$$이므로 이를 위 matrix에 대입하여 state space equation을 표현하면 다음과 같다.  
+$$\dot{\mathbf{x}}(t)=\begin{bmatrix}0&1&0\\0&0&1\\-2&23&-5\end{bmatrix}\mathbf{x}(t)+\begin{bmatrix}0\\0\\1\end{bmatrix}\mathbf{r}(t)$$  
+$$\mathbf{y}(t)=\begin{bmatrix}2&1&0\end{bmatrix}\mathbf{x}(t)$$  
+
 ---
 ## P3.12
 ![3-12](images/3-12.png)
