@@ -17,13 +17,13 @@ $$dx_1(t)/dt=x_2(t)$$
 ### (c)
 상태미분방정식은
 $$\dot{\mathbf{x}}(t)=\mathbf{A}\mathbf{x}(t)+\mathbf{B}\mathbf{u}(t)$$
-$$\mathbf{y}(t)=\mathbf{C}\mathbf{x}(t)+\mathbf{D}\mathbf{u}(t)$$
-꼴 이므로
-$$\dot{\mathbf{x}}(t)=\begin{bmatrix}0&1\\k/M&-b/M\end{bmatrix}\mathbf{x}(t)+\begin{bmatrix}0\\1/M\end{bmatrix}\mathbf{F}(t)$$
+$$\mathbf{y}(t)=\mathbf{C}\mathbf{x}(t)+\mathbf{D}\mathbf{u}(t)$$ 와 같은 형식이므로  
+$$\dot{\mathbf{x}}(t)=\begin{bmatrix}0&1\\k/M&-b/M\end{bmatrix}\mathbf{x}(t)+\begin{bmatrix}0\\1/M\end{bmatrix}\mathbf{F}(t)$$  
 $$\mathbf{y}(t)=\begin{bmatrix}1&0\end{bmatrix}\mathbf{x}(t)$$
 이다.  
 
 ---
+
 ## P3.3
 ![3-3](images/3-3.png)
 이 system을 파악하기 위해 KCL, KVL을 통해 관계식을 얻는다.
